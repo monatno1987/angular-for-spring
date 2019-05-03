@@ -1,0 +1,43 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Test
+  </h1>
+  <!--<img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">-->
+</div>
+<div class="container custom-container">
+  <div class="col-md-12">
+    <h3 class="mb-3 text-center">Sentence</h3>
+
+    <div class="form-group">
+      <textarea type="text" [(ngModel)]="SentenceDetails.sentence" class="form-control" placeholder="Sentence" maxlength="10000" required></textarea>
+
+    </div>
+
+
+    <div class="form-group">
+      <button class="btn btn-success btn-lg btn-block" (click)="addSentence()">Validate</button>
+    </div>
+
+  </div>
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+      <tr>
+        <td>Sentence</td>
+        <td>Words Count</td>
+        <td>Total Leter</td>
+      </tr>
+      </thead>
+      <tr *ngFor="let item of dicc">
+        <td>{{item.sent}}</td>
+        <td>{{item.result}}</td>
+        <td>{{item.total}}:Leter</td>
+      </tr>
+    </table>
+  </div>
+
+
+</div>
+
+<router-outlet></router-outlet>
